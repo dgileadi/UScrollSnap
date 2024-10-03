@@ -8,14 +8,14 @@ A simple tool to make unity scrollview to be snapped. It includes some default r
 ![](ReadmeResources~/add-package.png)
 
 1) Go Window - Package Manager - Add package from git URL...
-2. Paste this url : https://github.com/emrecelik95/LightScrollSnap.git
+2. Paste this url : https://github.com/UModules/UScrollSnap.git
 
 
 * **Install via manifest.json file**
 1) Navigate to Packages/manifest.json file.
 2) Add this into  `"dependencies": {` block
 ```json
-"com.emrecelik95.lightscrollsnap": "https://github.com/emrecelik95/LightScrollSnap.git"
+"com.useffarahmand.uscrollsnap": "https://github.com/UModules/UScrollSnap.git"
 ```
 
 *If you don't want to use git, you can download and unzip the repo and move it to Packages folder.*
@@ -29,11 +29,11 @@ A simple tool to make unity scrollview to be snapped. It includes some default r
 
 - From Scratch
 1) Create a canvas with screen based **Canvas Scaler**.
-2) Create horizontal **ScrollView**.
-3) Add **Horizontal Layout Group** and **Content Size Fitter** to **Content** object;
-4) Bring the first item to center using **Padding** in **Horizontal Layout Group**.
+2) Create **ScrollView** (horizontal or vertical).
+3) Add **Horizontal Layout Group** or **Vertical Layout Group** (based on your ScrollView) and **Content Size Fitter** to **Content** object;
+4) Bring the first item to center using **Padding** in **Horizontal Layout Group** or **Vertical Layout Group*.
 5) Add **ScrollSnap** component to **ScrollRect** object.
-6) Drag **ScrollBarHorizontal** to the **Scrollbar** field on **ScrollSnap** component.
+6) Drag **ScrollBarHorizontal** or **ScrollBarVertical** to the **Scrollbar** field on **ScrollSnap** component.
 7) Drag any ScrollSnap effects to the Effects field.
 
 ### Using Transition Effects
