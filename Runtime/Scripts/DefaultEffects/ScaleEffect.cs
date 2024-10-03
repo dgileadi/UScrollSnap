@@ -1,9 +1,9 @@
 ﻿using UnityEngine;
 
-namespace LightScrollSnap
+namespace UScrollSnap
 {
-    [CreateAssetMenu(fileName = "ScaleEffect", menuName = "ScrollSnapEffect/Scale Effect")]
-    public class ScaleEffect : BaseScrollSnapEffect
+    [CreateAssetMenu(fileName = "ScaleEffect", menuName = "UScrollSnap/Scale Effect")]
+    internal class ScaleEffect : BaseScrollSnapEffect
     {
         public Vector2 selectedItemScale = Vector2.one * 1.25f;
         public Vector2 unselectedItemScale = Vector2.one;

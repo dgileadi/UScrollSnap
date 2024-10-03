@@ -4,30 +4,36 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
+using UScrollSnap.SharedTypes;
+using UScrollSnap.Tools;
 
-namespace LightScrollSnap
+namespace UScrollSnap
 {
     [RequireComponent(typeof(ScrollRect))]
     public class ScrollSnap : MonoBehaviour
     {
         #region INSPECTOR PROPERTIES
 
+        [SerializeField] private LayoutDirection layoutDirection = LayoutDirection.Horizontally;
         [SerializeField] private DeltaTimeMode deltaTimeMode = DeltaTimeMode.Unscaled;
 
-        [Header("Scroll Settings")] [SerializeField]
+        [Header("Scroll Settings")]
+        [SerializeField]
         private Scrollbar scrollbar;
 
-        [SerializeField] [Range(0, 1)] private float initialPos;
+        [SerializeField][Range(0, 1)] private float initialPos;
         public bool autoScrollToClickedItem = true;
         public float smoothScrollDuration = 0.35f;
         public float smoothSnapDuration = 0.25f;
 
-        [Header("Snap Settings")] [SerializeField]
+        [Header("Snap Settings")]
+        [SerializeField]
         private float snapDelayDuration = 0.15f;
 
         [SerializeField] private float snapDistanceThreshold = 0.001f;
 
-        [Header("Effect Settings")] [SerializeField]
+        [Header("Effect Settings")]
+        [SerializeField]
         private List<BaseScrollSnapEffect> effects;
 
         #endregion
@@ -104,10 +110,22 @@ namespace LightScrollSnap
 
             _distance = _itemCount > 1 ? 1f / (_itemCount - 1f) : 1;
             _items = new List<RectTransform>(_itemCount);
-            for (int i = 0; i < _itemCount; i++)
+
+            if (layoutDirection == LayoutDirection.Horizontally)
             {
-                _items.Add(Content.GetChild(i).GetComponent<RectTransform>());
-                _posses[i] = _distance * i;
+                for (int i = 0; i < _itemCount; i++)
+                {
+                    _items.Add(Content.GetChild(i).GetComponent<RectTransform>());
+                    _posses[i] = _distance * i;
+                }
+            }
+            else
+            {
+                for (int i = _itemCount - 1; i >= 0; i--)
+                {
+                    _items.Add(Content.GetChild(i).GetComponent<RectTransform>());
+                    _posses[i] = _distance * i;
+                }
             }
 
             SetupClickHandlers();

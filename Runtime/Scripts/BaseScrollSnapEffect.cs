@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace LightScrollSnap
+namespace UScrollSnap
 {
     public abstract class BaseScrollSnapEffect : ScriptableObject
     {

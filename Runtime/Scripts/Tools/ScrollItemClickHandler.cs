@@ -2,9 +2,9 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-namespace LightScrollSnap
+namespace UScrollSnap.Tools
 {
-    public class ScrollItemClickHandler : MonoBehaviour, IPointerClickHandler
+    internal class ScrollItemClickHandler : MonoBehaviour, IPointerClickHandler
     {
         private event Action _clickListener;
         private void OnDestroy() => RemoveAllListeners();
