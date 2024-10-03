@@ -1,7 +1,7 @@
 {
-  "name": "com.emrecelik95.lightscrollsnap",
-  "version": "1.0.2",
-  "displayName": "Light Scroll Snap",
+  "name": "com.emrecelik95.uscrollsnap",
+  "version": "2.0.0",
+  "displayName": "UScrollSnap",
   "description": "This package contains a basic scroll snap with customizable effects.",
   "unity": "2020.1",
   "samples": [
@@ -19,7 +19,6 @@
     "picker"
   ],
   "author": {
-    "name": "Emre Celik",
-    "email": "emrecelik95@gmail.com"
+    "name": "Usef Farahmand"
   }
 }
