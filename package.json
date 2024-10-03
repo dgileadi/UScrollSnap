@@ -1,5 +1,5 @@
 {
-  "name": "com.emrecelik95.uscrollsnap",
+  "name": "com.useffarahmand.uscrollsnap",
   "version": "2.0.0",
   "displayName": "UScrollSnap",
   "description": "This package contains a basic scroll snap with customizable effects.",
@@ -18,7 +18,5 @@
     "carousel",
     "picker"
   ],
-  "author": {
-    "name": "Usef Farahmand"
-  }
+    "author": { "name": "Usef Farahmand", "url": "https://github.com/UsefFarahmand" },
 }
