@@ -3,20 +3,9 @@
   "version": "2.0.0",
   "displayName": "UScrollSnap",
   "description": "This package contains a basic scroll snap with customizable effects.",
-  "unity": "2020.1",
-  "samples": [
-    {
-      "displayName": "Basic Sample",
-      "description": "Contains a sample to show the basic functionality.",
-      "path": "Samples~/Basic Sample"
-    }
-  ],
-  "keywords": [
-    "ui",
-    "scroll",
-    "snap",
-    "carousel",
-    "picker"
-  ],
-    "author": { "name": "Usef Farahmand", "url": "https://github.com/UsefFarahmand" },
+  "unity": "2021.1",
+  "unityRelease": "0b5",
+  "author": {
+    "name": "Usef Farahmand"
+  }
 }
